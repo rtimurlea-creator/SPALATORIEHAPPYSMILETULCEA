@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spălătoria Happy Smile Tulcea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Spălătoria Happy Smile SRL Tulcea – spălătorie auto profesională pe Str. Orizontului 211-213. Curățenie rapidă, prețuri corecte, echipă prietenoasă." />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .logo span {
+      color: #007bff;
+    }
+
+    .nav-links a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      color: #555;
+    }
+
+    .hero-note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: #007bff;
+      color: white;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1px solid #007bff;
+      cursor: pointer;
+      background: transparent;
+      color: #007bff;
+      font-size: 0.95rem;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+
+    .btn-ghost:hover {
+      background: #e9f2ff;
+    }
+
+    section {
+      padding: 40px 0;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    .section-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-text {
+      text-align: center;
+      color: #555;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: #007bff;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e9f2ff;
+      color: #007bff;
+      margin-top: 6px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 18px;
+    }
+
+    .info-item {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .info-item strong {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-details {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .contact-details a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    .map-placeholder {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0 24px;
+      font-size: 0.85rem;
+      color: #777;
+      border-top: 1px solid #e0e0e0;
+      background: #fafafa;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 40px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-right: 12px;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(link => {
+        link.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href").slice(1);
+          const target = document.getElementById(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      const contactForm = document.getElementById("contact-form");
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Mulțumim pentru mesaj! Vă vom contacta în cel mai scurt timp.");
+        contactForm.reset();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          Spălătoria <span>Happy Smile</span>
+        </div>
+        <div class="nav-links">
+          <a href="#acasa">Acasă</a>
+          <a href="#servicii">Servicii</a>
+          <a href="#info">Program & Locație</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Acasă / Hero -->
+    <section id="acasa">
+      <div class="container">
+        <div class="hero">
+          <p class="hero-note">SPĂLĂTORIE AUTO – TULCEA</p>
+          <h1>Spălătoria Happy Smile SRL</h1>
+          <p>
+            Curățenie completă pentru mașina ta, rapid și profesionist, în Tulcea,
+            <span class="highlight">Str. Orizontului 211–213</span>.  
+            Venim cu atenție la detalii, produse de calitate și o echipă prietenoasă.
+          </p>
+          <div style="margin-top: 18px;">
+            <a href="tel:0728605712" class="btn-primary">Sună acum: 0728 605 712</a>
+            <a href="#servicii" class="btn-ghost">Vezi serviciile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicii -->
+    <section id="servicii">
+      <div class="container">
+        <h2>Servicii</h2>
+        <p class="section-subtitle">
+          Tot ce ai nevoie pentru o mașină curată și îngrijită.
+        </p>
+
+        <div class="section-content">
+          <div class="services">
+            <div class="card">
+              <h3>Spălare exterior</h3>
+              <p>
+                Spălare manuală sau cu jet de înaltă presiune, clătire și uscare atentă
+                pentru a proteja vopseaua. Eliminăm murdăria, praful și urmele de insecte.
+              </p>
+              <span class="tag">Rapid & eficient</span>
+            </div>
+
+            <div class="card">
+              <h3>Curățare interior</h3>
+              <p>
+                Aspirare completă, ștergere bord, fețe de uși și zone de depozitare.
+                Opțional: curățare tapițerie textilă/înlăturare pete, la cerere.
+              </p>
+              <span class="tag">Interior împrospătat</span>
+            </div>
+
+            <div class="card">
+              <h3>Pachet complet</h3>
+              <p>
+                Exterior + interior într-un singur pachet avantajos, pentru cei care vor
+                mașina să arate ca nouă atât pe dinafară cât și pe dinăuntru.
+              </p>
+              <span class="tag">Cel mai ales pachet</span>
+            </div>
+
+            <div class="card">
+              <h3>Servicii suplimentare</h3>
+              <p>
+                Ceruire rapidă, curățare jante, tratament bord, parfumare interior și alte
+                servicii la cerere, în funcție de nevoi.
+              </p>
+              <span class="tag">La cerere</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program & Locație -->
+    <section id="info">
+      <div class="container">
+        <h2>Program & Locație</h2>
+        <p class="section-subtitle">
+          Ne găsești ușor în Tulcea, cu acces facil și loc pentru așteptare.
+        </p>
+
+        <div class="section-content">
+          <div class="info-grid">
+            <div class="info-item">
+              <strong>Adresă:</strong><br />
+              SPĂLĂTORIA HAPPY SMILE SRL<br />
+              Tulcea, Str. Orizontului 211–213
+              <br /><br />
+              <strong>Telefon:</strong>
+              <a href="tel:0728605712">0728 605 712</a>
+              <br />
+              <strong>Email:</strong>
+              <a href="mailto:spalatoriehappysmile@gmail.com">
+                spalatoriehappysmile@gmail.com
+              </a>
+            </div>
+
+            <div class="info-item">
+              <strong>Persoane de contact:</strong><br />
+              Radu Carabulea<br />
+              Timulrea Romeo
+              <br /><br />
+              Pentru programări, întrebări sau colaborări, ne poți contacta
+              telefonic sau pe email. Răspundem cât de repede putem.
+            </div>
+
+            <div class="info-item">
+              <strong>Program (exemplu – modifică după nevoie):</strong><br />
+              Luni – Vineri: 08:00 – 18:00<br />
+              Sâmbătă: 09:00 – 16:00<br />
+              Duminică: Închis
+              <br /><br />
+              Recomandăm să sunați înainte în perioadele aglomerate
+              (weekend / sărbători).
+            </div>
+          </div>
+
+          <div class="map-placeholder">
+            Aici poți integra ulterior o hartă (Google Maps) cu locația exactă a spălătoriei.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-subtitle">
+          Trimite-ne un mesaj direct din formular sau sună-ne pentru programare rapidă.
+        </p>
+
+        <div class="section-content">
+          <div class="contact-details">
+            Telefon: <a href="tel:0728605712">0728 605 712</a><br />
+            Email: <a href="mailto:spalatoriehappysmile@gmail.com">spalatoriehappysmile@gmail.com</a>
+          </div>
+
+          <form id="contact-form">
+            <div>
+              <label for="nume">Nume</label>
+              <input type="text" id="nume" name="nume" required />
+            </div>
+            <div>
+              <label for="telefon">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div>
+              <label for="mesaj">Mesaj</label>
+              <textarea id="mesaj" name="mesaj" required
+                placeholder="Ex: Doresc o programare pentru spălare completă, sâmbătă după-amiază."></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Trimite mesajul</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> SPĂLĂTORIA HAPPY SMILE SRL, Tulcea – Str. Orizontului 211–213.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
